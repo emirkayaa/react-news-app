@@ -45,7 +45,7 @@ function Slider({news}){
                 return(
                     <div key={index} className="h-96 carousel-item " style={{ backgroundImage:`url('${item.urlToImage}')` }}>
                         <div className="content flex-col sm:flex-row w-full items-center text-center px-4 md:px-10">
-                            <img src={item.urlToImage} className="mr-2" />
+                            <img src={item.urlToImage} className="mr-2" alt="image"/>
                             <div className="flex flex-col w-96 items-center">
                                 <h1 className="text-xl md:text-2xl ellipsis-2 ">{item.title}</h1>
                                 <p className="ellipsis-4 text-sm md:text-lg">

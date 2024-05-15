@@ -1,13 +1,9 @@
 import logo from "../logo.svg";
-import {useEffect, useState} from "react";
 import {TiThMenuOutline} from "react-icons/ti";
 export default function Header({mobileAside, getMobileAside}) {
 
     const tailwind = "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/1024px-Tailwind_CSS_Logo.svg.png";
-    const [search, setSearch] = useState("");
-    useEffect(() => {
-        setSearch(window.location.pathname.replace('/',''))
-    }, [])
+    
     return (
         <header className=" w-full  p-3">
             <div className="flex justify-between p-3 bg-slate-700 dark:bg-slate-700 rounded-2xl px-6">
