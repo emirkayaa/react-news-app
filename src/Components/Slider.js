@@ -35,10 +35,10 @@ function Slider({news}){
         keyBoardControl={true}
         customTransition="all 1"
         transitionDuration={1000}
-        containerClass="carousel-container"
+        containerClass="carousel-container "
         removeArrowOnDeviceType={["tablet", "mobile"]}
         dotListClass="custom-dot-list-style"
-        itemClass="carousel-item-padding-40-px"
+        itemClass="carousel-item-padding-40-px "
     >
         {
             news.map((item,index) => {

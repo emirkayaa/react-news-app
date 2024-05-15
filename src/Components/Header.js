@@ -5,8 +5,8 @@ export default function Header({mobileAside, getMobileAside}) {
     const tailwind = "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/1024px-Tailwind_CSS_Logo.svg.png";
     
     return (
-        <header className=" w-full  p-3">
-            <div className="flex justify-between p-3 bg-slate-50 dark:bg-slate-700 rounded-2xl px-6">
+        <header className=" w-full  p-3 ">
+            <div className="flex justify-between p-3 bg-slate-50 shadow-lg dark:bg-slate-700 rounded-2xl px-6">
                 <div className="flex items-center">
                     <button onClick={() => getMobileAside(mobileAside = !mobileAside)} className="block md:hidden text-2xl bg-slate-500/30 rounded-full p-2.5 mr-3">
                         <TiThMenuOutline/>
@@ -16,8 +16,7 @@ export default function Header({mobileAside, getMobileAside}) {
 
                 </div>
                
-
-<div className="flex justify-between mb-3 p-1 dark:border-slate-500">
+            <div className="flex justify-between mb-3 p-1 dark:border-slate-500">
                             <div className="flex items-center">
                                 <img src="https://avatars.githubusercontent.com/u/95496971?v=4" className="h-10 rounded-full" alt="logo"  />
                                 <span className="ml-2 text-xl font-medium">Emir Kaya</span>
