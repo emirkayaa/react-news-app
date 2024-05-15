@@ -12,17 +12,16 @@ function Main({ news, headlines }) {
   return (
     <div
       className="overflow-y-auto overflow-x-hidden rounded-2xl w-full p-2 sm:px-8 md:px-16 lg:px-36 xl:px-64 xxl:px-96"
-      style={{ height: "calc(100vh - 70px)" }}
     >
       <div>
         <Slider news={headlines} />
         <div className="grid grid-cols-2 gap-5 mt-3">
-          <div className="col-span-1">
+          <div className="col-span-1 ">
             {news1.map((item, index) => {
               return (
                 <>
                   <a href={item.url} target="_blank">
-                  <div className="rounded-xl bg-slate-100 dark:bg-slate-900 mb-3">
+                  <div className="rounded-xl bg-slate-100 dark:bg-slate-900 mb-3 shadow-lg hover:shadow-2xl">
                     <img
                       src={item.urlToImage}
                       className="rounded-t-xl w-full p-0"
@@ -49,7 +48,7 @@ function Main({ news, headlines }) {
             {news2.map((item, index) => {
               return (
                 <>
-                  <div className="rounded-xl bg-slate-100 dark:bg-slate-900 mb-3">
+                  <div className="rounded-xl bg-slate-100 dark:bg-slate-900 mb-3 shadow-lg hover:shadow-2xl">
                     <img
                       src={item.urlToImage}
                       className="rounded-t-xl w-full p-0"

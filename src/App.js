@@ -11,7 +11,7 @@ function App() {
   const apikey = '8dc5040e74934888b1d9c6a0467cef33'
   const category = window.location.pathname.replace('/','');
   const [mobileAside, setMobileAside] = useState(false)
-  const url = `https://newsapi.org/v2/everything?q=${category}&apiKey=${apikey}`;
+  const url = category == '' ? `https://newsapi.org/v2/everything?q=entertainment&apiKey=${apikey}` : `https://newsapi.org/v2/everything?q=${category}&apiKey=${apikey}`;
   var urlHeadlines =`https://newsapi.org/v2/top-headlines?country=us&apiKey=${apikey}`
 
   const getNews = async () => {
@@ -34,7 +34,9 @@ function App() {
       <Header mobilAside={mobileAside} getMobileAside={e => setMobileAside(e)} />
        <div className='flex'>
      <Aside mobilAside={mobileAside} getMobilAside={e => setMobileAside=(e)}/>
-     <Main news={news} headlines={headlines}/>
+    {
+      news != [] ?  <Main news={news} headlines={headlines}/> : <div className='flex justify-center text-center items-center text-3xl text-slate-500'>Gösterilecek Bir veri yok </div> 
+    }
      </div>
     </div>
   );

@@ -11,24 +11,24 @@ import { useState } from "react";
 import logo from "../logo.svg";
 function Aside({mobilAside, getMobilAside}) {
   const categories = [
-    { id: 2, name: "Sports", key: "sports", icon: <FaBasketballBall /> },
-    { id: 3, name: "Technology", key: "technology", icon: <FaRobot /> },
-    { id: 4, name: "Health", key: "health", icon: <FaHeartbeat /> },
-    { id: 5, name: "Science", key: "science", icon: <FaFlask /> },
+    { id: 1, name: "Sports", key: "sports", icon: <FaBasketballBall /> },
+    { id: 2, name: "Technology", key: "technology", icon: <FaRobot /> },
+    { id: 3, name: "Health", key: "health", icon: <FaHeartbeat /> },
+    { id: 4, name: "Science", key: "science", icon: <FaFlask /> },
     {
-      id: 6,
+      id: 5,
       name: "Entertainment",
       key: "entertainment",
       icon: <FaGlassCheers />,
     },
-    { id: 7, name: "Business", key: "business", icon: <FaBriefcase /> },
+    { id: 6, name: "Business", key: "business", icon: <FaBriefcase /> },
   ];
   const [search, setSearch] = useState("");
   return (
     <div className={`${mobilAside ? "block" : "hidden"} md:block  w-72 z-[2] fixed md:relative`}>
         <div className="w-72">
       <div
-        className="bg-slate-100 dark:bg-slate-700 flex flex-col justify-between  w-full rounded-2xl p-2 pt-3 overflow-auto"
+        className="bg-slate-50 dark:bg-slate-700 flex flex-col justify-between  w-full rounded-2xl p-2 pt-3 overflow-auto"
         style={{ height: "calc(100vh - 100px)" }}
       >
         <ul className="space-y-10 text-center mt-10 ">
